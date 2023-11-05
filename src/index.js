@@ -1,6 +1,8 @@
 import express from 'express'
 import cors from 'cors'
 import recipesRoutes from './routes/recipes.routes.js'
+import authRoutes from './routes/auth.routes.js'
+
 
 const app = express()
 
@@ -12,6 +14,7 @@ app.use(cors({
     origin: '*'
 }))
 app.use('/api', recipesRoutes)
+app.use('/api', authRoutes)
 
 
 app.listen(3001, () => {
