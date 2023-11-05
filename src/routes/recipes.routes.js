@@ -4,8 +4,6 @@ import { getRecipes, getRecipeById, createRecipe, deleteRecipe } from "../contro
 
 const router = Router();
 
-console.log('ANTES DEL ROUTER');
-
 router.get('/recipes', getRecipes);
 router.get('/recipe/:id', getRecipeById);
 router.post('/recipe', createRecipe);
